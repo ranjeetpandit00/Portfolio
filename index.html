@@ -18,378 +18,460 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
-  <title>Ranjeet | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Loading Screen -->
+  <!-- <div class="loading-screen">
+    <div class="loader">
+      <div class="loader-circle"></div>
+      <div class="loader-text">Please Wait</div>
+    </div>
+  </div> -->
+
+  <!-- Cursor Effect -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
 
   <!-- 🔷 Fixed Header -->
   <header class="main-header">
-    <div class="logo">Ranjeet  <span class="bold">Pandit</span></div>
-    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-text">Ranjeet</span>
+        <span class="logo-bold">Pandit</span>
+      </div>
 
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#whatido">WHAT I DO</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#skills">SKILLS</a></li>
-        <li><a href="#experience">EXPERIENCE</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link">HOME</a></li>
+          <li><a href="#whatido" class="nav-link">WHAT I DO</a></li>
+          <li><a href="#about" class="nav-link">ABOUT</a></li>
+          <li><a href="#skills" class="nav-link">SKILLS</a></li>
+          <li><a href="#experience" class="nav-link">EXPERIENCE</a></li>
+          <li><a href="#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+      
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
 
-  <!-- 💡 Sections -->
+  <!-- Hero Section -->
   <section id="home" class="hero-section">
-  <div class="hero-overlay">
-    <h1>Hi, I am <span class="highlight">Ranjeet Kumar Pandit</span></h1>
-   <h2>A Professional Website & Application Developer</h2>
-<p>
-  I specialize in creating modern, responsive, and user-friendly websites.  
-  Along with web development, I also build scalable applications to deliver  
-  complete digital solutions that bring ideas to life.
-</p>
-    <a href="assets/Ranjeet  Pandit CV .pdf" class="btn" download>Download Resume</a>
-  </div>
-</section>
-
-
-  <section class="hero-banner">
-    <div class="hero-content">
-      <h1>Transforming Ideas Into</h1>
-<h1><strong>Powerful Websites & Applications</strong></h1>
-<p>
-  Crafting modern, responsive, and user-friendly digital experiences that help 
-  businesses and individuals grow in the online world.
-</p>
-
+    <div class="hero-particles"></div>
+    <div class="hero-overlay">
+      <div class="hero-content" data-aos="fade-up">
+        <h1 class="hero-greeting">Hi, I am <span class="highlight gradient-text">Ranjeet Kumar Pandit</span></h1>
+        <h2 class="hero-title">A Professional Website & Application Developer</h2>
+        <p class="hero-description">
+          I specialize in creating modern, responsive, and user-friendly websites.  
+          Along with web development, I also build scalable applications to deliver  
+          complete digital solutions that bring ideas to life.
+        </p>
+        <a href="assets/Ranjeet  Pandit CV .pdf" class="btn btn-primary" download>
+          <span>Download Resume</span>
+          <i class="fas fa-download"></i>
+        </a>
+      </div>
+      
     </div>
   </section>
 
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <div class="hero-banner-content" data-aos="zoom-in">
+      <h1 class="banner-title">Transforming Ideas Into</h1>
+      <h1 class="banner-subtitle"><strong>Powerful Websites & Applications</strong></h1>
+      <p class="banner-description">
+        Crafting modern, responsive, and user-friendly digital experiences that help 
+        businesses and individuals grow in the online world.
+      </p>
+    </div>
+    <div class="banner-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </section>
 
-<section id="whatido" class="what-i-do">
-  <div class="container">
-    <h2 class="section-title">What <span class="highlight">I Do</span></h2>
-    <p class="subtitle">I turn ideas into visually stunning and functional websites.</p>
+  <!-- What I Do Section -->
+  <section id="whatido" class="what-i-do">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">What <span class="highlight gradient-text">I Do</span></h2>
+      <p class="subtitle" data-aos="fade-up" data-aos-delay="100">I turn ideas into visually stunning and functional websites.</p>
 
-    <div class="content-grid">
-      <div class="image">
-        <img src="assets/img/design.jpg" alt="Design Image">
-      </div>
-
-      <div class="services">
-        <div class="service-card fade-in">
-          <i class="icon">🎨</i>
-          <div>
-            <h3>UI/UX Design</h3>
-            <p>Crafting clean and user-friendly interfaces with modern design principles.</p>
+      <div class="content-grid">
+        <div class="image" data-aos="fade-right" data-aos-delay="200">
+          <div class="image-wrapper">
+            <img src="assets/img/design.jpg" alt="Design Image">
+            <div class="image-overlay"></div>
           </div>
         </div>
 
-        <div class="service-card fade-in" style="animation-delay: 0.3s">
-          <i class="icon">💻</i>
-          <div>
-            <h3>Web Development</h3>
-            <p>Building responsive, fast-loading, and SEO-friendly websites using modern tech.</p>
+        <div class="services">
+          <div class="service-card" data-aos="fade-left" data-aos-delay="300">
+            <div class="service-icon">
+              <i class="icon">🎨</i>
+            </div>
+            <div class="service-content">
+              <h3>UI/UX Design</h3>
+              <p>Crafting clean and user-friendly interfaces with modern design principles.</p>
+            </div>
+          </div>
+
+          <div class="service-card" data-aos="fade-left" data-aos-delay="400">
+            <div class="service-icon">
+              <i class="icon">💻</i>
+            </div>
+            <div class="service-content">
+              <h3>Web Development</h3>
+              <p>Building responsive, fast-loading, and SEO-friendly websites using modern tech.</p>
+            </div>
+          </div>
+
+          <div class="service-card" data-aos="fade-left" data-aos-delay="500">
+            <div class="service-icon">
+              <i class="icon">📱</i>
+            </div>
+            <div class="service-content">
+              <h3>Mobile Development</h3>
+              <p>Creating seamless mobile apps that perform smoothly on both Android and iOS.</p>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="service-card fade-in" style="animation-delay: 0.6s">
-          <i class="icon">📱</i>
-          <div>
-            <h3>Mobile Development</h3>
-            <p>Creating seamless mobile apps that perform smoothly on both Android and iOS.</p>
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-header" data-aos="fade-up">
+        <h2 class="section-title">Who Am I</h2>
+        <p class="tagline">Bringing ideas to life through elegant code and design.</p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-image" data-aos="fade-right" data-aos-delay="200">
+          <div class="image-frame">
+            <img src="assets/img/mypic.jpg" alt="Profile Photo">
+            <div class="image-border"></div>
           </div>
+        </div>
+        <div class="about-text" data-aos="fade-left" data-aos-delay="300">
+          <h3>Hello, I'm <span class="highlight gradient-text">Ranjeet Pandit</span></h3>
+          <p>
+            I'm a passionate full-stack web developer with a creative eye and strong technical skills.
+            I specialize in creating responsive, engaging websites that deliver real impact.
+          </p>
+          <p>
+            With a degree in Computer Science and years of experience building dynamic projects, I blend design and code to deliver beautiful and functional experiences across devices.
+          </p>
+          <p>
+            I'm always eager to learn new technologies and tackle new challenges that push me forward.
+          </p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-
-<section id="about" class="about-section">
-  <div class="container">
-    <div class="about-header">
-      <h2>Who Am I </h2>
-      <p class="tagline">Bringing ideas to life through elegant code and design.</p>
-    </div>
-
-    <div class="about-content">
-      <div class="about-image">
-        <img src="assets/img/mypic.jpg" alt="Profile Photo">
-      </div>
-      <div class="about-text">
-        <h3>Hello, I'm <span class="highlight">Ranjeet Pandit</span></h3>
-        <p>
-          I’m a passionate full-stack web developer with a creative eye and strong technical skills.
-          I specialize in creating responsive, engaging websites that deliver real impact.
-        </p>
-        <p>
-          With a degree in Computer Science and years of experience building dynamic projects, I blend design and code to deliver beautiful and functional experiences across devices.
-        </p>
-        <p>
-          I’m always eager to learn new technologies and tackle new challenges that push me forward.
-        </p>
+  <!-- Stats Section -->
+  <section class="stats-skills-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-box" data-aos="flip-up" data-aos-delay="100">
+          <i class="fa fa-mobile"></i>
+          <h3 class="stat-number" data-target="10">0</h3>
+          <p>Mobile Apps</p>
+        </div>
+        <div class="stat-box" data-aos="flip-up" data-aos-delay="200">
+          <i class="fa fa-user"></i>
+          <h3 class="stat-number" data-target="100">0</h3>
+          <p>Web Apps</p>
+        </div>
+        <div class="stat-box" data-aos="flip-up" data-aos-delay="300">
+          <i class="fa fa-arrows-alt"></i>
+          <h3 class="stat-number" data-target="100">0</h3>
+          <p>UI Designs</p>
+        </div>
+        <div class="stat-box" data-aos="flip-up" data-aos-delay="400">
+          <i class="fa fa-download"></i>
+          <h3 class="stat-number" data-target="100">0</h3>
+          <p>Projects</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<section class="stats-skills-section">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-box">
-        <i class="fa fa-mobile"></i>
-        <h3>10</h3>
-        <p>Mobile Apps</p>
-      </div>
-      <div class="stat-box">
-        <i class="fa fa-user"></i>
-        <h3>100+</h3>
-        <p>Web Apps</p>
-      </div>
-      <div class="stat-box">
-        <i class="fa fa-arrows-alt"></i>
-        <h3>100+</h3>
-        <p>UI Designs</p>
-      </div>
-      <div class="stat-box">
-        <i class="fa fa-download"></i>
-        <h3>100+</h3>
-        <p>Projects</p>
-      </div>
-    </div>
-
-    <!-- <div class="skills">
-      <div class="skill">
-        <label>UI/UX Design</label>
-        <div class="progress"><div style="width: 90%"></div></div>
-      </div>
-      <div class="skill">
-        <label>HTML5, CSS3, SASS</label>
-        <div class="progress"><div style="width: 85%"></div></div>
-      </div>
-      <div class="skill">
-        <label>WordPress</label>
-        <div class="progress"><div style="width: 80%"></div></div>
-      </div>
-      <div class="skill">
-        <label>Graphic Design</label>
-        <div class="progress"><div style="width: 75%"></div></div>
-      </div>
-      <div class="skill">
-        <label>Development</label>
-        <div class="progress"><div style="width: 70%"></div></div>
-      </div>
-    </div> -->
-  </div>
-</section>
-
-
-  <section id="skills">
-
-    <section class="skills-section">
-    <h2>My Skills</h2>
-    <p>Here are some of the skills I have mastered over the years</p>
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <h2 data-aos="fade-up">My Skills</h2>
+    <p data-aos="fade-up" data-aos-delay="100">Here are some of the skills I have mastered over the years</p>
 
     <div class="skills-container">
-
-      <div class="skill-card">
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
         <i class="ri-code-s-slash-line skill-icon"></i>
         <div class="skill-title">HTML / CSS</div>
-        <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+        <div class="progress-bar"><div class="progress" data-progress="95"></div></div>
+        <span class="progress-label">95%</span>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
         <i class="ri-javascript-line skill-icon"></i>
         <div class="skill-title">JavaScript</div>
-        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        <div class="progress-bar"><div class="progress" data-progress="85"></div></div>
+        <span class="progress-label">85%</span>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
         <i class="ri-reactjs-line skill-icon"></i>
         <div class="skill-title">PHP</div>
-        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+        <div class="progress-bar"><div class="progress" data-progress="80"></div></div>
+        <span class="progress-label">80%</span>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
         <i class="ri-database-2-line skill-icon"></i>
         <div class="skill-title">Python</div>
-        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+        <div class="progress-bar"><div class="progress" data-progress="75"></div></div>
+        <span class="progress-label">75%</span>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
         <i class="ri-wordpress-line skill-icon"></i>
         <div class="skill-title">WordPress</div>
-        <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+        <div class="progress-bar"><div class="progress" data-progress="70"></div></div>
+        <span class="progress-label">70%</span>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
         <i class="ri-paint-brush-line skill-icon"></i>
         <div class="skill-title">SQL Developer</div>
-        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        <div class="progress-bar"><div class="progress" data-progress="90"></div></div>
+        <span class="progress-label">90%</span>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
         <i class="ri-apps-2-line skill-icon"></i>
         <div class="skill-title">Mobile Apps</div>
-        <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
+        <div class="progress-bar"><div class="progress" data-progress="65"></div></div>
+        <span class="progress-label">65%</span>
       </div>
-
     </div>
   </section>
 
+  <!-- Experience Section -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">
+        <span class="title-decoration">My</span> Experience Journey
+      </h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Transforming challenges into opportunities through technology
+      </p>
 
+      <div class="experience-grid">
+        
+        <!-- Experience Card 1 -->
+        <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="card-badge current">Current</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">IT Engineering</h3>
+            <p class="card-period">
+              <i class="fas fa-calendar-alt"></i>
+              Aug 2025 - Present
+            </p>
+            <div class="card-divider"></div>
+            <p class="card-description">
+              Focused on the fundamentals of <strong>computer Software & Hardware</strong>, 
+              and <strong>networking</strong>. Gained hands-on experience in programming, database management, 
+              operating systems, and troubleshooting. Also explored network security, system administration, 
+              and the integration of hardware with software to build reliable IT solutions.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Software</span>
+              <span class="tag">Hardware</span>
+              <span class="tag">Networking</span>
+              <span class="tag">Security</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-line"></div>
+          </div>
+        </div>
+
+        <!-- Experience Card 2 -->
+        <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">IT Support Engineer</h3>
+            <p class="card-company">
+              <i class="fas fa-building"></i>
+              Sanjivani
+            </p>
+            <p class="card-period">
+              <i class="fas fa-calendar-alt"></i>
+              Jan 2025 - Aug 2025
+            </p>
+            <div class="card-divider"></div>
+            <p class="card-description">
+              Provided technical support for <strong>software applications</strong> and system environments. 
+              Specialized in diagnosing and resolving software-related issues, performing installations, 
+              updates, and configuration. Collaborated with teams to ensure smooth deployment of tools, 
+              enhanced system performance, and delivered reliable solutions to end-users.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Technical Support</span>
+              <span class="tag">Troubleshooting</span>
+              <span class="tag">System Config</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-line"></div>
+          </div>
+        </div>
+
+        <!-- Experience Card 3 -->
+        <div class="experience-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Cyber Security Intern</h3>
+            <p class="card-company">
+              <i class="fas fa-building"></i>
+              VS Square Info Solutions
+            </p>
+            <p class="card-period">
+              <i class="fas fa-calendar-alt"></i>
+              Aug 2024 - Dec 2024
+            </p>
+            <div class="card-divider"></div>
+            <p class="card-description">
+              Worked on securing IT infrastructure by implementing and managing <strong>firewalls</strong>, 
+              <strong>VPNs</strong>, and other security protocols. Monitored systems for vulnerabilities, 
+              applied patches and updates, and ensured compliance with security standards. 
+              Collaborated with teams to design access controls, prevent unauthorized intrusions, 
+              and strengthen overall network defense.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Cybersecurity</span>
+              <span class="tag">Firewalls</span>
+              <span class="tag">VPN</span>
+              <span class="tag">Security Protocols</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-line"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
- 
 
-
-<!-- Experience Section -->
-<section class="experience" id="experience">
-  <div class="container">
-    <h2 class="section-title">Experience</h2>
-    <p class="section-subtitle">My professional journey so far</p>
-
-    <div class="timeline">
-
-      <!-- Timeline Item -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>IT Engineering  </h3>
-          <span class="date">Aug 2025 - Present</span>
-          <p>
-  Focused on the fundamentals of <strong></strong>, <strong>computer Software & Hardware</strong>, 
-  and <strong>networking</strong>. Gained hands-on experience in programming, database management, 
-  operating systems, and troubleshooting. Also explored network security, system administration, 
-  and the integration of hardware with software to build reliable IT solutions.
-</p>      </div>
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <div class="contact-info" data-aos="fade-right">
+        <div class="contact-image">
+          <img src="assets/img/5124556.png" alt="Contact Illustration">
+        </div>
+        <h2>Get in Touch</h2>
+        <p>Have an idea or project? Let's collaborate and create something amazing together.</p>
       </div>
 
-      <!-- Timeline Item -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>IT Support Engineer - Sanjivani</h3>
-          <span class="date">Jan 2025 - Aug 2025</span>
-          <p>
-  Provided technical support for <strong>software applications</strong> and system environments. 
-  Specialized in diagnosing and resolving software-related issues, performing installations, 
-  updates, and configuration. Collaborated with teams to ensure smooth deployment of tools, 
-  enhanced system performance, and delivered reliable solutions to end-users.
-</p>
+      <div class="contact-form" data-aos="fade-left">
+        <h3>Send Me a Message</h3>
+        <form action="https://formspree.io/f/xovndzej" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <i class="fas fa-comment-dots"></i>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left" data-aos="fade-up">
+        <h2 class="footer-logo">Ranjeet<span>Pandit</span></h2>
+        <p>Designing modern & creative websites with passion 🚀</p>
+      </div>
+      
+      <div class="footer-center" data-aos="fade-up" data-aos-delay="100">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">🏠 Home</a></li>
+          <li><a href="#about">👨‍💻 About</a></li>
+          <li><a href="#skills">⚡ Skills</a></li>
+          <li><a href="#experience">💼 Experience</a></li>
+          <li><a href="#contact">📩 Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-right" data-aos="fade-up" data-aos-delay="200">
+        <h3>Follow Me</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/ranjeet-kumar-pandit-171049310" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/ranjeetpandit00" target="_blank"><i class="fab fa-github"></i></a>
         </div>
       </div>
-
-      <!-- Timeline Item -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Cyber Security (Intership) - VS square info Solutions</h3>
-          <span class="date">Aug 2024 - Dec 2024</span>
-          <p>
-  Worked on securing IT infrastructure by implementing and managing <strong>firewalls</strong>, 
-  <strong>VPNs</strong>, and other security protocols. Monitored systems for vulnerabilities, 
-  applied patches and updates, and ensured compliance with security standards. 
-  Collaborated with teams to design access controls, prevent unauthorized intrusions, 
-  and strengthen overall network defense.
-</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<section class="contact" id="contact">
-  <div class="contact-container">
-    
-    <!-- Left Side (Image + Text) -->
-    <div class="contact-info">
-      <img src="assets/img/5124556.png" alt="Contact Illustration">
-      <h2>Get in Touch</h2>
-      <p>Have an idea or project? Let’s collaborate and create something amazing together.</p>
     </div>
 
-    <!-- Right Side (Form) -->
-    <div class="contact-form">
-      <h3>Send Me a Message</h3>
-      <form action="https://formspree.io/f/xovndzej" method="POST">
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <input type="tel" name="phone" placeholder="Your Phone Number" required>
-        </div>
-        <div class="form-group">
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Send Message</button>
-      </form>
+    <div class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <i class="fas fa-arrow-up"></i>
     </div>
-  </div>
-</section>
 
-
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-container">
-    
-    <!-- Left -->
-    <div class="footer-left">
-      <h2 class="footer-logo">Ranjeet<span>Pandit</span></h2>
-      <p>Designing modern & creative websites with passion 🚀</p>
+    <div class="footer-bottom">
+      <p>© 2025 <span>Ranjeet Pandit</span> | All Rights Reserved</p>
     </div>
-    
-    <!-- Center -->
-    <div class="footer-center">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#home">🏠 Home</a></li>
-        <li><a href="#about">👨‍💻 About</a></li>
-        <li><a href="#skills">⚡ Skills</a></li>
-        <li><a href="#experience">💼 Experience</a></li>
-        <li><a href="#contact">📩 Contact</a></li>
-      </ul>
-    </div>
-    
-    <!-- Right -->
-    <div class="footer-right">
-      <h3>Follow Me</h3>
-      <div class="social-icons">
-  <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
-  <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-  <a href="https://www.linkedin.com/in/ranjeet-kumar-pandit-171049310" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-  <a href="https://github.com/ranjeetpandit00" target="_blank"><i class="fab fa-github"></i></a>
-</div>
-    </div>
-  </div>
+  </footer>
 
-  <!-- Scroll To Top -->
-  <div class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <i class="fas fa-arrow-up"></i>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 <span>Ranjeet Pandit</span> | All Rights Reserved</p>
-  </div>
-</footer>
-
-
-
-<script src="assets/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
